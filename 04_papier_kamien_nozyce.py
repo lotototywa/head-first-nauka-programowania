@@ -1,19 +1,12 @@
 import random
 
 zwyciezca = ''
+opcje = ['kamień', 'papier', 'nozyce']
+wybor_komputera = random.choice(opcje)
 
-liczba_losowa = random.randint(0, 2)
-
-if liczba_losowa == 0:
-    wybor_komputera = 'kamień'
-elif liczba_losowa == 1:
-    wybor_komputera = 'papier'
-else:
-    wybor_komputera = 'nozyce'
 wybor_uzytkownika = ''
-while (wybor_uzytkownika != 'kamień' and
-       wybor_uzytkownika != 'papier' and
-       wybor_uzytkownika != 'nozyce'):
+
+while (wybor_uzytkownika not in opcje):
     wybor_uzytkownika = input('kamień, papier czy nozyce? ')
 
 if wybor_uzytkownika == wybor_komputera:
