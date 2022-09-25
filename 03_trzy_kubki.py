@@ -1,6 +1,6 @@
 import random
 import time
-
+wybrany = ''
 tajemnica = "czary mary"
 kubki = ['1','2','3']
 wynik = random.choice(kubki)
@@ -14,9 +14,8 @@ print('Wkładam kulkę do kubka...')
 time.sleep(1.5)
 print('Mieszam...')
 time.sleep(3)
-
-
-wybrany = input ('Podaj numer kubka ')
+while(wybrany not in kubki):
+    wybrany = input ('Podaj numer kubka ')
 time.sleep(2.5)
 if wynik == wybrany:
     print('Brawo!!! wygrałeś(aś) w trzy kubki !!! Gratulacje!!!')
